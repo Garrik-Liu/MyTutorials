@@ -1,0 +1,116 @@
+/* 全局样式 */
+
+* {
+	margin: 0;    /* 消除元素默认margin 和 padding, 为了后面更方便设置 */ 
+	padding: 0;
+}
+
+body {
+	background-color: #ccc;  /* 背景设置为白色 */
+}
+
+/* 头部样式 */
+
+.header {
+	height: 80px;
+	line-height: 80px;
+	background-color: #333;
+	overflow: hidden;   /* 消除浮动 */
+}
+
+/* 左上LOGO样式 */
+
+.logo {
+	font-size: 1.5em;
+	color: #fff;
+	float: left;
+	margin-left: 20px;
+}
+
+/* 右上链接栏样式 */
+
+.header-links {
+	float: right;
+}
+
+.header-links li {
+	float: left;  /* 向左浮动，水平排列 */
+	list-style-type: none;  
+	margin-right: 20px;
+}
+
+.header-links a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* 段落样式 */
+
+.paragraph {
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid #999;
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.title-style {
+	margin-bottom: 15px;
+}
+
+/* 表格样式 */
+
+.table-style {
+	border-collapse:collapse; /* border-collapse 属性设置表格的边框是否被合并为一个单一的边框。不懂的话，可以观察前后区别 */
+}
+
+.table-style th, td {
+	padding: 3px;
+}
+
+.table-header {
+	background-color: #333;
+	color: #fff;
+}
+
+.table-footer {
+	background-color: #999;
+	color: #fff;
+}
+
+/* 表单样式 */
+
+.form-table {
+	display: table;     /* 此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。 */
+	margin-left: 600px;
+} 
+
+.form-row {
+	display: table-row;  /* 此元素会作为一个表格行显示（类似 <tr>）*/
+	height: 1.5em;
+	line-height: 1.5em;
+}
+
+.form-row label, input, select, textarea {
+	display: table-cell;  /* 此元素会作为一个表格单元格显示（类似 <td> 和 <th>） */
+}
+
+.form-row label {
+	text-align: right; /* label里的文本向右对齐 */
+}
+
+.form-describe {
+	vertical-align: top; /* textarea 所对应的 label 文本垂直向上对齐 */
+}
+
+/* 表格submit按钮样式 */
+
+.submit-button {
+	width: 100%;
+	margin: 10px;
+	height: 40px;
+	background-color: #3757c9;
+	color: #fff;
+}
+
+
