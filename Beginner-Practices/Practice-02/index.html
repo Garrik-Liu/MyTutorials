@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pratice</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+    <div class="header"> 
+    	<div class="logo">GARRIK</div>
+        <ul class="header-links">
+	        <li><a href="#">导航链接一</a></li>
+	        <li><a href="#">导航链接二</a></li> 
+	        <li><a href="#">导航链接三</a></li>
+        </ul>
+    </div>
+    <!-- 头部结束 -->
+    <!-- 段落开始 -->
+    <div class="paragraph">
+    	<h2 class="title-style">文章一级标题</h2>
+
+	    <h3>文章二级标题</h3>
+
+	    <span>文章作者</span> <span>文章发表时间</span>
+
+	    <p>
+	    	这是一个段落，这是一个段落，这是一个段落，<b>这是一个加粗，</b><i>这是一个斜体，</i>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落。
+	    	<a href="https://www.baidu.com">这里可以链接到百度。</a>
+	    </p>
+
+	    <img src="https://cdn.cultofmac.com/wp-content/uploads/2016/10/CoM-The-Ultimate-Front-End-Development-Bundle-780x390.jpg" alt="这是个图片">
+    </div>
+    <!-- 段落结束 -->
+    <!-- 段落开始 -->
+    <div class="paragraph">
+    	<h2 class="title-style">表格</h2>
+        <!-- 表格开始 -->
+	    <table border="1" class="table-style">
+	        <tr class="table-header">
+	            <th>表头</th>
+	            <th>表头</th>
+	            <th>表头</th>
+	        </tr>
+	        <tr>
+	            <td>第一行第一列</td>
+	            <td>第一行第二列</td>
+	            <td>第一行第三列</td>
+	        </tr>
+	        <tr>
+	            <td>第二行第一列</td>
+	            <td>第二行第二列</td>
+	            <td>第二行第三列</td>
+	        </tr>
+	        <tr>
+	            <td>第三行第一列</td>
+	            <td>第三行第二列</td>
+	            <td>第三行第三列</td>
+	        </tr>
+	        <tr class="table-footer">
+	            <td>总计</td>
+	            <td colspan="2">数值</td>
+	        </tr>
+	    </table>
+	    <!-- 表格结束 -->
+    </div>
+    <!-- 段落结束 -->
+    <!-- 段落开始 -->
+    <div class="paragraph">
+    	<h2 class="title-style">表单</h2>
+	    <!-- 表单开始 -->
+	    <form>      <!-- 表单用于向服务器传输数据。我会在后面的教程中详细讲解form表单-->  
+	    	<div class="form-table">
+	    		<div class="form-row">                               
+			        <label for="name">名字：</label>
+			        <input type="text" name="name"  placeholder="请输入你的名字">
+		        </div>
+
+		        <div class="form-row">       
+			        <label for="email">邮箱：</label>
+			        <input type="email" name="email" placeholder="请输入你的邮箱地址" /> 
+			    </div>
+
+	            <div class="form-row">       
+			        <label for="gender">性别：</label>
+			        <input type="radio" name="gender" value="male"> 男 
+			        <input type="radio" name="gender" value="female"> 女
+		        </div>
+
+	            <div class="form-row">       
+			        <label for="city">城市：</label>
+			        <select name="city">
+			            <option value="beijing">北京</option>
+			            <option value="tianjin">天津</option>
+			            <option value="shanghai">上海</option>
+			            <option value="guangzhou">广州</option>
+			        </select>
+	            </div>
+
+	            <div class="form-row">       
+			        <label for="hobby">爱好：</label>
+			        <input type="checkbox" name="hobby" value="sport"> 运动 
+			        <input type="checkbox" name="hobby" value="art"> 艺术 
+			        <input type="checkbox" name="hobby" value="science"> 科学 
+		        </div>
+
+	            <div class="form-row">       
+			        <label for="describe" class="form-describe">个人描述：</label>
+			        <textarea rows="10" cols="40" name="describe" placeholder="请简单介绍你自己。"></textarea>
+			    </div>    
+	    	</div>  
+	        <input type="submit" value="提交" class="submit-button">
+	    </form>
+	    <!-- 表单结束 -->
+    </div>
+    <!-- 段落结束 -->
+</body>
+</html>
