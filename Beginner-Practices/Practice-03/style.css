@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box; /* 全局元素修改box-sizing为border-box */
+}
+
+body {
+	min-width: 650px;   /* 为保持排版，最小宽度不能低于650px */
+	font-family: Arial;
+	padding: 20px;
+	background: #f1f1f1;
+}
+
+/* Blog Header */
+.index-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	background: #fff;
+}
+
+/* Blog Nav */
+.index-header-nav ul {
+	list-style: none;
+	display: flex;
+}
+
+.index-header-nav li {
+	padding: 10px;
+}
+
+.index-header-nav a {
+	text-decoration: none;
+	color: #aaa;
+}
+
+.index-header-nav a:hover {
+	color: #000;
+}
+
+
+/* Blog Content Container */
+.index-container {
+	display: flex;    /* 左右两列采用flex布局 */
+	margin-top: 20px;
+}
+
+
+/* Left column */
+.index-main { 
+	width: 75%;     /* 百分比布局 */
+}
+
+/* Right column */
+.index-aside {
+	width: 25%;    /* 百分比布局 */
+	padding-left: 20px;
+}
+
+/* Fake Figure */
+.fakeimg {
+	background-color: #aaa;
+	padding: 20px;
+	margin: 10px 0;
+}
+
+.index-main-article .fakeimg {
+	height: 200px;
+}
+
+/* Article */
+.index-main-article {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Aside Section */
+.index-aside-section {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Footer */
+.index-footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top: 20px;
+}
