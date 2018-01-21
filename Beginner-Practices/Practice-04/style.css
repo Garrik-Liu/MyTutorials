@@ -3,7 +3,7 @@
 }
 
 body {
-	min-width: 650px;   /* 为保持排版，最小宽度不能低于650px */
+	width: 100%;   /* 为保持排版，最小宽度不能低于650px */
 	font-family: Arial;
 	padding: 20px;
 	background: #f1f1f1;
