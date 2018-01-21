@@ -7,6 +7,38 @@ body {
 	font-family: Arial;
 	padding: 20px;
 	background: #f1f1f1;
+	margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .index-header {
+    	flex-direction: column;
+    }
+
+    .index-header-nav ul {
+    	padding: 0;
+    }
+
+	.index-container {
+		flex-direction: column;
+	}
+	.index-main {
+        width: 100%;
+	} 
+	.index-aside {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.index-main { 
+		width: 75%;     
+	}
+
+	.index-aside {
+	    width: 25%;    
+	    padding-left: 20px;
+    }
 }
 
 /* Blog Header */
@@ -44,17 +76,6 @@ body {
 	margin-top: 20px;
 }
 
-
-/* Left column */
-.index-main { 
-	width: 75%;     /* 百分比布局 */
-}
-
-/* Right column */
-.index-aside {
-	width: 25%;    /* 百分比布局 */
-	padding-left: 20px;
-}
 
 /* Fake Figure */
 .fakeimg {
