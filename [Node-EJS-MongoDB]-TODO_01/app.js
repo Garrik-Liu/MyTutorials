@@ -7,15 +7,17 @@ var ObjectID = require('mongodb').ObjectID;
 var mongoServerUrl = 'mongodb://localhost:27017';
 
 var server = http.createServer(function(req, res) {
+
     var urlObj = url.parse(req.url, true);
+    var mongoClient = new MongoClient(mongoServerUrl);
 
     switch (urlObj.pathname) {
         case "":
         case "/":
-            MongoClient.connect(mongoServerUrl, function(err, client) {
+            mongoClient.connect(function(err) {
                 if (err) throw err;
 
-                var db = client.db('todoDb');
+                var db = mongoClient.db('todoDb');
                 var collection = db.collection('todos');
 
                 collection.find({}).toArray(function(err, result) {
@@ -23,7 +25,7 @@ var server = http.createServer(function(req, res) {
 
                     ejs.renderFile('./views/index.ejs', { tasks: result }, function(err, str) {
                         if (err) throw err;
-                        client.close(function() {
+                        mongoClient.close(function() {
                             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' });
                             res.write(str);
                             res.end();
@@ -37,16 +39,16 @@ var server = http.createServer(function(req, res) {
         case "/addTask":
             var taskDetail = urlObj.query.taskDetail;
 
-            MongoClient.connect(mongoServerUrl, function(err, client) {
+            mongoClient.connect(function(err) {
                 if (err) throw err;
 
-                var db = client.db('todoDb');
+                var db = mongoClient.db('todoDb');
                 var collection = db.collection('todos');
 
                 collection.insertOne({ taskDetail: taskDetail }, function(err, result) {
                     if (err) throw err;
 
-                    client.close(function() {
+                    mongoClient.close(function() {
                         res.writeHead(302, { 'Location': '/' });
                         res.end();
                     });
@@ -59,16 +61,16 @@ var server = http.createServer(function(req, res) {
 
             var targetObjectId = new ObjectID(targetId);
 
-            MongoClient.connect(mongoServerUrl, function(err, client) {
+            mongoClient.connect(function(err) {
                 if (err) throw err;
 
-                var db = client.db('todoDb');
+                var db = mongoClient.db('todoDb');
                 var collection = db.collection('todos');
 
                 collection.deleteOne({ _id: targetObjectId }, function(err, result) {
                     if (err) throw err;
 
-                    client.close(function() {
+                    mongoClient.close(function() {
                         res.writeHead(302, { 'Location': '/' });
                         res.end();
                     });
