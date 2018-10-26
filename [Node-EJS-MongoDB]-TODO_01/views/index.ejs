@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO LIST</title>
+</head>
+
+<body>
+    <div>
+        <h1>TODO LIST</h1>
+        <form action="/addTask" method="GET">
+            <input type="text" name="taskDetail" placeholder="请输入任务..." />
+            <input type="submit" value="提交">
+        </form>
+        <ul>
+            <% for(var i = 0; i < tasks.length; i++) { %>
+            <li>
+            <span><%= tasks[i].taskDetail %></span>
+            <a href="/deleteTask?id=<%= tasks[i]._id %>">删除</a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>
